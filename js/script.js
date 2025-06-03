@@ -701,8 +701,8 @@ function updateAmendmentStatusIndicators() {
     // Loop through all amendment cards
     const cards = document.querySelectorAll('.amendment-card-home');
     cards.forEach(card => {
-        // Get amendment number from the card
-        const amendmentLink = card.querySelector('a');
+        // Get amendment number from the card's parent link
+        const amendmentLink = card.closest('a');
         if (!amendmentLink) return;
         
         const hrefMatch = amendmentLink.href.match(/amendment=(\d+)/);
